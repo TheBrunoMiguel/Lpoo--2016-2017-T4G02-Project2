@@ -31,4 +31,4 @@ public class RpgGame extends ApplicationAdapter {
 		img.dispose();
 	}
 }
-//Hello git kraken test 3
+//Hello git kraken test 5
