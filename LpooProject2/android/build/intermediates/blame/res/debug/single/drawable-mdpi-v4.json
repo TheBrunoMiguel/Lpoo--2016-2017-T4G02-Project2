@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\User\\Documents\\Code Projects\\LpooProject2\\Lpoo--2016-2017-T4G02-Project2\\LpooProject2\\android\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\User\\Documents\\Code Projects\\LpooProject2\\Lpoo--2016-2017-T4G02-Project2\\LpooProject2\\android\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\User\\Documents\\Code Projects\\LpooProject2\\android\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\User\\Documents\\Code Projects\\LpooProject2\\android\\res\\drawable-mdpi\\ic_launcher.png"
     }
