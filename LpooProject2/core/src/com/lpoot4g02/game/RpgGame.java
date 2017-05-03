@@ -5,6 +5,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.lpoot4g02.game.States.GameStateManager;
+import com.lpoot4g02.game.States.MenuState;
 
 public class RpgGame extends ApplicationAdapter {
 
@@ -13,27 +15,29 @@ public class RpgGame extends ApplicationAdapter {
 
     public static final String TITLE = "An Rpg Game";
 
-	SpriteBatch batch;
-	Texture img;
+	private GameStateManager gsm;
+	private SpriteBatch batch;       //There should be only one in the game, because it is a heavy file. You should pass it around
 	
 	@Override
-	public void create () {
+	public void create ()
+	{
+		gsm = new GameStateManager();
 		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
+		Gdx.gl.glClearColor(1, 0, 0, 1);
+		gsm.push(new MenuState(gsm));
 	}
 
 	@Override
-	public void render () {
-		Gdx.gl.glClearColor(1, 0, 0, 1);
+	public void render ()
+	{
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		batch.begin();
-		batch.draw(img, 0, 0);
-		batch.end();
+		gsm.update(Gdx.graphics.getDeltaTime());
+		gsm.render(batch);
 	}
 	
 	@Override
-	public void dispose () {
+	public void dispose ()
+	{
 		batch.dispose();
-		img.dispose();
 	}
 }
