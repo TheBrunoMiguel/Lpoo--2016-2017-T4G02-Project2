@@ -7,6 +7,12 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class RpgGame extends ApplicationAdapter {
+
+    public static final int  WIDTH = 480;
+    public static final int HEIGHT = 800;
+
+    public static final String TITLE = "An Rpg Game";
+
 	SpriteBatch batch;
 	Texture img;
 	
@@ -31,4 +37,3 @@ public class RpgGame extends ApplicationAdapter {
 		img.dispose();
 	}
 }
-//Hello git kraken test 6
