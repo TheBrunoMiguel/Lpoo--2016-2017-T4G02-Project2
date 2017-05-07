@@ -3,7 +3,7 @@ Lpoo 2016-2017 T4G02 Project 2
  
  UML Class Diagram:
  
- ![Alt text](https://github.com/TheBrunoMiguel/Lpoo--2016-2017-T4G02-Project2/blob/master/Assets/Diagrama%20de%20Classes%20UML.png.?raw=true "UML Diagram")
+ ![UML Diagram](Diagrama%20de%20Classes%20UML.png)
  
  
  Design Patterns to use:
