@@ -24,4 +24,5 @@ public abstract class State
     protected abstract void handleInput();
     public abstract void update(float dt);          //dt (delta) is the time until the next frame is updated
     public abstract void render(SpriteBatch sb);    //sb is a container that has everything that's gonna be rendered in the next frame
+    public abstract void dispose();                 //To dispose or stuff, to prevent memory leaks (memory filled with stuff that doesnt matter anymore)
 }

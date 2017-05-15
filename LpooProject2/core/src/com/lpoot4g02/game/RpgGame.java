@@ -10,8 +10,8 @@ import com.lpoot4g02.game.States.MenuState;
 
 public class RpgGame extends ApplicationAdapter {
 
-    public static final int  WIDTH = 480;
-    public static final int HEIGHT = 800;
+    public static final int  WIDTH = 800;
+    public static final int HEIGHT = 480;
 
     public static final String TITLE = "An Rpg Game";
 
