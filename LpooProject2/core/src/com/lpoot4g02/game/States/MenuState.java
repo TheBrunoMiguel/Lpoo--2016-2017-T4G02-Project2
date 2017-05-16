@@ -25,7 +25,7 @@ public class MenuState extends State
     @Override
     public void handleInput()
     {
-        if(Gdx.input.justTouched())         //We can later change this to Touched (?) to change it to a spaceship-like game
+        if(Gdx.input.justTouched())
         {
             gsm.set(new PlayState(gsm));
             dispose();
