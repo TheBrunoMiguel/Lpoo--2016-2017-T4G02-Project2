@@ -18,6 +18,9 @@ public class MenuState extends State
     public MenuState(GameStateManager gsm)
     {
         super(gsm);
+
+        cam.setToOrtho(false, RpgGame.WIDTH/2, RpgGame.HEIGHT/2);
+
         background = new Texture("Spaceship Background.png");
         playBtn = new Texture("Play Button.png");
     }
@@ -28,7 +31,6 @@ public class MenuState extends State
         if(Gdx.input.justTouched())
         {
             gsm.set(new PlayState(gsm));
-            dispose();
         }
     }
 
@@ -41,9 +43,11 @@ public class MenuState extends State
     @Override
     public void render(SpriteBatch sb)          //Sprite Batch its like a box: first you open it, put what you want in there, then you close it
     {
+        sb.setProjectionMatrix(cam.combined);
+
         sb.begin();
-        sb.draw(background, 0, 0, RpgGame.WIDTH, RpgGame.HEIGHT);
-        sb.draw(playBtn, (RpgGame.WIDTH/2) - (playBtn.getWidth()/2), (RpgGame.HEIGHT/2) - (playBtn.getWidth()/2));
+        sb.draw(background, 0, 0);
+        sb.draw(playBtn, cam.position.x - playBtn.getWidth()/2, cam.position.y);
         sb.end();
     }
 
@@ -52,5 +56,7 @@ public class MenuState extends State
     {
         background.dispose();
         playBtn.dispose();
+
+        System.out.println("Menu State Disposed");
     }
 }

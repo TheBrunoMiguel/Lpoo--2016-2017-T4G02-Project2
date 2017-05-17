@@ -18,19 +18,22 @@ public class GameStateManager
         states = new Stack<State>();
     }
 
+
     public void push(State state)
     {
         states.push(state);
     }
 
+
     public void pop()
     {
-        states.pop();
+        states.pop().dispose();
     }
+
 
     public void set(State state)
     {
-        states.pop();
+        states.pop().dispose();
         states.push(state);
     }
 
@@ -41,6 +44,7 @@ public class GameStateManager
     {
         states.peek().update(dt);
     }
+
 
     public void render(SpriteBatch sb)
     {

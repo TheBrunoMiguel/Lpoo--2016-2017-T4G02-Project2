@@ -79,4 +79,11 @@ public class Wall
     {
         return player.overlaps(boundsTop) || player.overlaps(boundsBot);
     }
+
+
+    public void dispose()
+    {
+        topWall.dispose();
+        bottomWall.dispose();
+    }
 }
